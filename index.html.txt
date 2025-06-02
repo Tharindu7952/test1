@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Digital | Digital Marketing Agency</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background: radial-gradient(circle, rgba(79,70,229,0.1) 0%, rgba(255,255,255,0) 70%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-light">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">N</span>
+                </div>
+                <span class="ml-3 text-2xl font-bold text-dark">Nexus<span class="text-primary">Digital</span></span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-10">
+                <a href="#" class="font-medium hover:text-primary transition">Home</a>
+                <a href="#" class="font-medium hover:text-primary transition">Services</a>
+                <a href="#" class="font-medium hover:text-primary transition">About</a>
+                <a href="#" class="font-medium hover:text-primary transition">Case Studies</a>
+                <a href="#" class="font-medium hover:text-primary transition">Contact</a>
+            </nav>
+            
+            <button class="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-indigo-700 transition hidden md:block">
+                Get Started
+            </button>
+            
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 hero-pattern">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-16 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight text-dark">
+                    Grow Your Business with <span class="text-primary">Digital Excellence</span>
+                </h1>
+                <p class="text-xl text-gray-600 mt-6 mb-10">
+                    We help brands thrive in the digital world with data-driven marketing strategies that deliver real results.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button class="bg-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-indigo-700 transition shadow-lg">
+                        Get Free Consultation
+                    </button>
+                    <button class="border-2 border-dark text-dark px-8 py-4 rounded-full font-medium text-lg hover:bg-dark hover:text-white transition">
+                        View Our Work
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 bg-primary rounded-full animate-float"></div>
+                    <div class="absolute top-10 left-10 w-80 h-80 bg-secondary rounded-full opacity-50 animate-float" style="animation-delay: 2s;"></div>
+                    <div class="absolute top-20 left-20 w-80 h-80 bg-purple-400 rounded-full opacity-30 animate-float" style="animation-delay: 4s;"></div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Digital Marketing" 
+                         class="absolute top-0 w-96 h-96 object-cover rounded-2xl shadow-2xl border-8 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-primary">250+</div>
+                    <div class="text-lg text-gray-600 mt-2">Happy Clients</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-primary">98%</div>
+                    <div class="text-lg text-gray-600 mt-2">Client Retention</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-primary">500+</div>
+                    <div class="text-lg text-gray-600 mt-2">Projects Completed</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-primary">15+</div>
+                    <div class="text-lg text-gray-600 mt-2">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Our <span class="text-primary">Services</span></h2>
+                <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+                    We offer comprehensive digital marketing solutions tailored to your business needs
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-2xl p-8 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">SEO Optimization</h3>
+                    <p class="text-gray-600 mb-6">
+                        Boost your organic visibility and drive qualified traffic to your website with our proven SEO strategies.
+                    </p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-2xl p-8 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-ad text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">PPC Advertising</h3>
+                    <p class="text-gray-600 mb-6">
+                        Get immediate results with targeted pay-per-click campaigns that maximize ROI and conversions.
+                    </p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-2xl p-8 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-hashtag text-2xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Social Media Marketing</h3>
+                    <p class="text-gray-600 mb-6">
+                        Build brand awareness and engage your audience with strategic social media campaigns.
+                    </p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-2xl p-8 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-envelope-open-text text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Email Marketing</h3>
+                    <p class="text-gray-600 mb-6">
+                        Nurture leads and retain customers with personalized email campaigns that drive engagement.
+                    </p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-2xl p-8 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-pen-fancy text-2xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Content Marketing</h3>
+                    <p class="text-gray-600 mb-6">
+                        Attract and convert your target audience with valuable, relevant content that builds trust.
+                    </p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-2xl p-8 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-pink-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Analytics & Reporting</h3>
+                    <p class="text-gray-600 mb-6">
+                        Make data-driven decisions with comprehensive analytics and actionable insights.
+                    </p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Client <span class="text-primary">Testimonials</span></h2>
+                <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Don't just take our word for it. See what our clients have to say.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                            <p class="text-gray-600">Marketing Director, TechNova</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "NexusDigital transformed our online presence. Our organic traffic increased by 230% in just 6 months. Their team is knowledgeable and responsive."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Chen">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Michael Chen</h4>
+                            <p class="text-gray-600">CEO, RetailPro</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "The PPC campaigns designed by NexusDigital have reduced our customer acquisition cost by 40% while increasing conversions. Exceptional results!"
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Emma Rodriguez</h4>
+                            <p class="text-gray-600">Founder, EcoGoods</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Their social media strategy tripled our engagement and grew our followers by 15,000 in 3 months. They truly understand our brand voice."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Grow Your Business?</h2>
+            <p class="text-xl text-indigo-100 max-w-2xl mx-auto mb-10">
+                Let's discuss how we can help you achieve your marketing goals and drive measurable results.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <button class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+                    Schedule a Free Consultation
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-700 transition">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">N</span>
+                        </div>
+                        <span class="ml-3 text-2xl font-bold">Nexus<span class="text-primary">Digital</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        We help businesses thrive in the digital landscape with innovative marketing solutions that deliver real results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">SEO Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">PPC Advertising</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Social Media Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Content Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Email Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Analytics & Reporting</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>123 Marketing Avenue, Suite 500<br>San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>hello@nexusdigital.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500">
+                <p>© 2023 NexusDigital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
